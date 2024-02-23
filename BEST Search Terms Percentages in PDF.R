@@ -1,16 +1,15 @@
-#####################################################################
-##########  DETERMINE PERCENTAGE OF TOTAL WORDS THAT HAVE  ##########
-##########     EITHER CAUSAL OR NONCAUSAL IMPLICATIONS.    ##########
-##########   USE THE ANNOTATION PYTHON SCRIPTS TO PRODUCE  ##########
-##########  A PDF WITH HIGHLIGHTED CAUSAL/NONCAUSAL TERMS  ##########
-##########   TO PROVIDE THE CONTEXT THE TERMS APPEAR IN.   ##########
-#####################################################################
+#######################################################################
+##########  TO DETERMINE PERCENTAGE OF TOTAL WORDS THAT HAVE  ##########
+##########      EITHER CAUSAL OR NONCAUSAL IMPLICATIONS.      ##########
+##########     USE THE ANNOTATION PYTHON SCRIPTS TO PRODUCE   ##########
+##########    A PDF WITH HIGHLIGHTED CAUSAL/NONCAUSAL TERMS   ##########
+##########     TO PROVIDE THE CONTEXT THE TERMS APPEAR IN.    ##########
+#######################################################################
 
 
 # Load necessary libraries
 library(tidyverse)
 library(pdftools)
-library(stringr)
 library(reticulate)
 library(rjson)
 library(jsonlite)

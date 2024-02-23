@@ -12,7 +12,8 @@
 
 # load libraries
 
-library(dplyr)
+library(tidyverse)
+
 
 # Load the .RData file
 load("data/linking word ratings.RData") # contains search terms to be added to causal_terms character vector

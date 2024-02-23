@@ -1,0 +1,39 @@
+---
+title: "Workflow for searching-pdf-files"
+author: "Dan Swart"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+
+# WORKFLOW FOR searching-df-files PROJECT
+
+1.  Use the "create-new-glossary.R" file to create new glossary vector object and and store it as an .RData file. 
+
+2.  Create a new R script for adding/removing search terms from the new glossary by cloning the "add-remove terms in causal_terms vector.R" file.  Create new script using the filenames and object names consistent with the new glossary name.  Store the updated vector object as an .RData file in the /data folder
+
+3.  Create a new R script for adding/removing search terms in the corresponding JSON file by cloning an existing add/remove R script file.  I use the JSON files in the PYTHON scripts for highlighting and underlining the glossary search terms in a pdf file.  Accordingly, this JSON file of search terms must be kept up to date.
+
+4.  Before annotating a pdf file, use the "Add-Remove search terms" R script file if you have any new search terms to add to, or remove from, the glossary.
+
+
+5.  Clone a new BEST Search Terms Percentages in PDF for any new glossaries.
+
+6.  Run the BEST Search Terms Percentages in PDF.R script, BUT DON'T RUN THE CODE TO INVOKE THE PYTHON ENVIRONMENT FOUND AT THE BOTTOM OF THE SCRIPT.
+
+7.  When ready to annotate the PDF file(s), RUN THE CODE TO INVOKE THE PYTHON ENVIRONMENT FOUND AT THE BOTTOM OF THE SCRIPT.
+
+8.  Run the appropriate PYTHON scripts to annotate the PDF(s).
+
+
+
+
+5.  Use the PYTHON scripts to annotate a new pdf file (don't overwrite your original pdf file) with highlighting and underlining the various search terms.  You can use up to three glossaries when highlighting pdf files.  Use the PYTHON code for highlighting, underlining, and squiggly lines to identify the terms from each of the three glossaries.  The JSON files are used by the PYTHON files so they must be kept up to date.
+
+
+
+
+
+
+
+

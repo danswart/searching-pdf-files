@@ -1,8 +1,8 @@
 ############################################################################
 #####  FIRST THE NONCAUSE_TERMS CHARACTER VECTOR IS UPDATED WITH THE R #####
-#####  SCRIPT NAMED 'ADD-REMOVE TERMS IN CAUSAL_TERMS VECTOR.R AND    #####
-#####           STORED AS AN .RDATA FILE IN THE DATA FOLDER           #####
-###########################################################################
+#####   SCRIPT NAMED 'ADD-REMOVE TERMS IN CAUSAL_TERMS VECTOR.R AND    #####
+#####           STORED AS AN .RDATA FILE IN THE DATA FOLDER            #####
+############################################################################
 
 ##############################################################################
 ##### NEXT, CREATE/UPDATE GLOSSARY OF NONCAUSAL SEARCH TERMS JSON FILE   #####
