@@ -1,10 +1,10 @@
-####################################################################
-##########  DETERMINE PERCENTAGE OF TOTAL WORDS THAT ARE  ##########
-##########  EITHER CAUSAL OR NONCAUSAL IN THEIR NATURE.   ##########
-##########  USE THE ANNOTATION PYTHON SCRIPTS TO PRODUCE  ##########
-##########      A PDF WITH CAUSAL AND NONCAUSAL TERMS     ##########
-##########  TO PROVIDE THE CONTEXT THE TERMS APPEAR IN.   ##########
-####################################################################
+#####################################################################
+##########  DETERMINE PERCENTAGE OF TOTAL WORDS THAT HAVE  ##########
+##########     EITHER CAUSAL OR NONCAUSAL IMPLICATIONS.    ##########
+##########   USE THE ANNOTATION PYTHON SCRIPTS TO PRODUCE  ##########
+##########  A PDF WITH HIGHLIGHTED CAUSAL/NONCAUSAL TERMS  ##########
+##########   TO PROVIDE THE CONTEXT THE TERMS APPEAR IN.   ##########
+#####################################################################
 
 
 # Load necessary libraries
