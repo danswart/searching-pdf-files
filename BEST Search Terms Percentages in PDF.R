@@ -30,35 +30,42 @@ causal_terms_glossary <- fromJSON('glossaries/glossary_causal_terms.json')
 noncausal_terms_glossary <- fromJSON('glossaries/glossary_noncausal_terms.json')
 
 
-
 # Function to count occurrences of whole words in text
 count_terms_in_text <- function(term) {
   pattern <- paste0('\\b', term, '\\b')
   sum(str_count(pdf_text, regex(pattern, ignore_case = TRUE)))
 }
 
+
 # Map the counting function over causal search terms
 causal_term_counts <- map_int(causal_terms_glossary, count_terms_in_text)
+
 
 # Combine causal search terms and their counts into a tibble
 causal_term_counts_df <- tibble(term = causal_terms_glossary, count = causal_term_counts)
 
+
 # Map the counting function over noncausal search terms
 noncausal_term_counts <- map_int(noncausal_terms_glossary, count_terms_in_text)
 
+
 # Combine causal search terms and their counts into a tibble
 noncausal_term_counts_df <- tibble(term = noncausal_terms_glossary, count = noncausal_term_counts)
+
 
 # Arrange the causal results in descending order of counts
 causal_term_counts_df <- causal_term_counts_df %>% 
   arrange(desc(count))
 
+
 # Arrange the noncausal results in descending order of counts
 noncausal_term_counts_df <- noncausal_term_counts_df %>% 
   arrange(desc(count))
 
+
 # Print the causal term counts dataframe
 print(causal_term_counts_df, n = Inf)
+
 
 # Print the noncausal term counts dataframe
 print(noncausal_term_counts_df, n = Inf)
@@ -70,8 +77,10 @@ print(noncausal_term_counts_df, n = Inf)
 # Convert pdf_text to a single string
 pdf_text_combined <- tolower(paste(pdf_text, collapse = " "))
 
+
 # Calculate total words
 total_words <- str_count(pdf_text_combined, boundary("word"))
+
 
 # Calculate occurrences of each causal search term and sum them
 causal_terms_total_occurrences <- sum(sapply(causal_terms_glossary, function(term) {
@@ -79,20 +88,25 @@ causal_terms_total_occurrences <- sum(sapply(causal_terms_glossary, function(ter
   sum(str_count(pdf_text_combined, regex(pattern, ignore_case = TRUE)))
 }))
 
+
 # Calculate occurrences of each noncausal search term and sum them
 noncausal_terms_total_occurrences <- sum(sapply(noncausal_terms_glossary, function(term) {
   pattern <- paste0('\\b', term, '\\b')
   sum(str_count(pdf_text_combined, regex(pattern, ignore_case = TRUE)))
 }))
 
+
 # Calculate the percentage of causal terms in document
 causal_percentage <- (causal_terms_total_occurrences / total_words) * 100
+
 
 # Calculate the percentage of noncausal terms in document
 noncausal_percentage <- (noncausal_terms_total_occurrences / total_words) * 100
 
+
 # Print the percentage for causal terms
 print(paste("The causal search terms represent", round(causal_percentage, 2), "% of the total words."))
+
 
 # Print the percentage for noncausal terms
 print(paste("The noncausal search terms represent", round(noncausal_percentage, 2), "% of the total words."))

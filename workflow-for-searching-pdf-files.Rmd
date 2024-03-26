@@ -26,9 +26,7 @@ output: html_document
 8.  Run the appropriate PYTHON scripts to annotate the PDF(s).
 
 
-
-
-5.  Use the PYTHON scripts to annotate a new pdf file (don't overwrite your original pdf file) with highlighting and underlining the various search terms.  You can use up to three glossaries when highlighting pdf files.  Use the PYTHON code for highlighting, underlining, and squiggly lines to identify the terms from each of the three glossaries.  The JSON files are used by the PYTHON files so they must be kept up to date.
+9.  Use the PYTHON scripts to annotate a new pdf file (don't overwrite your original pdf file) with highlighting and underlining the various search terms.  You can use up to three glossaries when highlighting pdf files.  Use the PYTHON code for highlighting, underlining, and squiggly lines to identify the terms from each of the three glossaries.  The JSON files are used by the PYTHON files so they must be kept up to date.
 
 
 
